@@ -6,12 +6,14 @@ public class PrimeFactor {
     public List<Integer> ComputeFactors(int number) {
 
 
-        if(number%2==0){
-            primeFactors.add(2);
-            number=number/2;
-            ComputeFactors(number);
+        for(int i = 2; i<= number; i++) {
+            while(number%i == 0) {
+               primeFactors.add(i);
+                number = number/i;
+                System.out.println(number);
+            }
         }
-        else if(number>1)
+         if(number>2)
         primeFactors.add(number);
 
         return primeFactors;

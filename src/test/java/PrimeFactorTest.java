@@ -39,4 +39,11 @@ public class PrimeFactorTest {
         PrimeFactor pf = new PrimeFactor();
         Assert.assertEquals(Arrays.asList(2,2),pf.ComputeFactors(4));
     }
+
+    @Test
+    public void PrimeFactorForN(){
+        PrimeFactor pf = new PrimeFactor();
+        Assert.assertEquals(Arrays.asList(2,2,3),pf.ComputeFactors(12));
+    }
 }
+
