@@ -13,4 +13,10 @@ public class PrimeFactorTest {
         PrimeFactor pf = new PrimeFactor();
         Assert.assertEquals(2, pf.ComputeFactors(2));
     }
+
+    @Test
+    public void PrimeFactorFor3(){
+        PrimeFactor pf = new PrimeFactor();
+        Assert.assertEquals(3, pf.ComputeFactors(3));
+    }
 }
