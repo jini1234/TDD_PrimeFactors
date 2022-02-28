@@ -1,9 +1,19 @@
-public class PrimeFactor {
+import java.util.LinkedList;
+import java.util.List;
 
-    public int ComputeFactors(int number) {
-        if(number>=2){
-            return number;
+public class PrimeFactor {
+    List<Integer> primeFactors=new LinkedList<>();
+    public List<Integer> ComputeFactors(int number) {
+
+
+        if(number%2==0){
+            primeFactors.add(2);
+            number=number/2;
+            ComputeFactors(number);
         }
-        return 0;
+        else if(number>1)
+        primeFactors.add(number);
+
+        return primeFactors;
     }
 }
